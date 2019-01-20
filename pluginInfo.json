@@ -8,8 +8,8 @@
 	"bugURL": "https://github.com/FalconChristmas/big-green-button/issues",
 	"versions": [
 		{
-			"minFPPVersion": 0,
-			"maxFPPVersion": 0,
+			"minFPPVersion": "0",
+			"maxFPPVersion": "0",
 			"branch": "master",
 			"allowUpdates": 1,
 			"sha": ""
