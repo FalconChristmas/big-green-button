@@ -1,8 +1,12 @@
 <?php
 $playlists = Array();
 foreach(scandir($playlistDirectory) as $pFile)
-	if ($pFile != "." && $pFile != "..")
-		$playlists[$pFile] = $pFile;
+    if ($pFile != "." && $pFile != "..") {
+        if (preg_match('/\.json$/', $pFile))  {
+            $pFile = preg_replace('/\.json$/', '', $pFile);
+            $playlists[$pFile] = $pFile;
+        }
+    }
 ?>
 
 <script>
@@ -22,7 +26,7 @@ function StartPlaylist()
 <fieldset>
 <legend>Big Green Button</legend>
 
-<p>Playlist: <?php PrintSettingSelect("Playlist", "PlaylistSelect", "0", "0", "disabled", $playlists, "big-green-button"); ?> Repeat: <?php PrintSettingCheckbox("Repeat", "Repeat", "1", "0", "big-green-button"); ?></p>
+<p>Playlist: <?php PrintSettingSelect("Playlist", "PlaylistSelect", "0", "0", "disabled", $playlists, "big-green-button"); ?> Repeat: <?php PrintSettingCheckbox("Repeat", "Repeat", 0, 0, "1", "0", "big-green-button"); ?></p>
 
 <p><input class="button" onClick="StartPlaylist();" type="submit" value="Start" /></p>
 
