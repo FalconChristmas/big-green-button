@@ -10,15 +10,23 @@ foreach(scandir($playlistDirectory) as $pFile)
 ?>
 
 <script>
-function StartPlaylist()
-{
-	var Playlist =  $("#PlaylistSelect").val();
-	var Repeat = $("#Repeat").is(':checked')?'checked':'unchecked';
-	var xmlhttp=new XMLHttpRequest();
-	var url = "fppxml.php?command=startPlaylist&playList=" + Playlist + "&repeat=" + Repeat ;
-	xmlhttp.open("GET",url,true);
-	xmlhttp.setRequestHeader('Content-Type', 'text/xml');
-	xmlhttp.send();
+function StartPlaylist() {
+	var PlayList =  $("#PlaylistSelect").val();
+	var command = "{\"command\": \"Start Playlist\"," 
+  		+ "\"multisyncCommand\": false,"
+  		+ "\"multisyncHosts\": \"\","
+  		+ "\"args\": ["
+    	+ "\"" + PlayList + "\","
+    	+ ($("#Repeat").is(':checked') ? "\"true\"," : "\"false\",")
+    	+ "\"false\" ] }";
+	
+	$.ajax({
+			url: "api/command",
+			type: 'POST',
+			dataType: 'json',
+			data: command
+			
+	});
 }
 </script>
 
