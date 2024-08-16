@@ -16,6 +16,13 @@
 		},
 		{
 			"minFPPVersion": "5.0",
+			"maxFPPVersion": "7.99",
+			"branch": "master",
+			"allowUpdates": 1,
+			"sha": ""
+		},
+		{
+			"minFPPVersion": "8.0",
 			"maxFPPVersion": "0",
 			"branch": "master",
 			"allowUpdates": 1,
