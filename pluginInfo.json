@@ -6,6 +6,7 @@
 	"homeURL": "https://github.com/FalconChristmas/big-green-button",
 	"srcURL": "https://github.com/FalconChristmas/big-green-button.git",
 	"bugURL": "https://github.com/FalconChristmas/big-green-button/issues",
+	"iconURL": "https://raw.githubusercontent.com/FalconChristmas/big-green-button/master/icon.png",
 	"versions": [
 		{
 			"minFPPVersion": "0",
