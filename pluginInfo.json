@@ -29,5 +29,15 @@
 			"allowUpdates": 1,
 			"sha": ""
 		}
-	]
+	],
+	"privacy": {
+		"summary": "Runs on this device only.",
+		"sends": [],
+		"collects": [],
+		"sensors": [],
+		"remoteAccess": "none",
+		"systemChanges": [],
+		"closedCode": false,
+		"other": "The chosen playlist and repeat setting are saved in FPP's plugin settings and are kept after uninstall."
+	}
 }
